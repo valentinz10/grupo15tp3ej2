@@ -78,7 +78,7 @@ public class ConversorTemperatura extends javax.swing.JFrame {
         });
 
         jbConvertidor.setBackground(new java.awt.Color(153, 153, 153));
-        jbConvertidor.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jbConvertidor.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
         jbConvertidor.setText("CONVERTIR");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
