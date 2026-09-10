@@ -80,6 +80,11 @@ public class ConversorTemperatura extends javax.swing.JFrame {
         jbConvertidor.setBackground(new java.awt.Color(153, 153, 153));
         jbConvertidor.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
         jbConvertidor.setText("CONVERTIR");
+        jbConvertidor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbConvertidorActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -164,6 +169,10 @@ public class ConversorTemperatura extends javax.swing.JFrame {
     private void jrRadianesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrRadianesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jrRadianesActionPerformed
+
+    private void jbConvertidorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbConvertidorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbConvertidorActionPerformed
 
     /**
      * @param args the command line arguments
