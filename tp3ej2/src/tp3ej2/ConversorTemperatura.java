@@ -172,6 +172,46 @@ public class ConversorTemperatura extends javax.swing.JFrame {
 
     private void jbConvertidorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbConvertidorActionPerformed
         // TODO add your handling code here:
+        
+        String txtIngresado = jtGrados.getText().trim();
+        
+        if (txtIngresado.isEmpty()) {
+        javax.swing.JOptionPane.showMessageDialog(this, 
+            "Por favor, ingrese una temperatura.", 
+            "Atención", 
+            javax.swing.JOptionPane.WARNING_MESSAGE);
+        return;
+        }
+        
+        
+        double celsius = Double.parseDouble(txtIngresado);
+        double resultado = 0;
+        String mensaje = "";
+        
+        if (jrFahrenheit.isSelected()){
+            resultado = celsius * 9/5 + 32;
+            mensaje = "La temperatura en grados Fahrenheit es: " + resultado;
+        } else if (jrKelvin.isSelected()) {
+            resultado = celsius + 273.5;
+            mensaje = "La temperatura en grados Kelvin es: " + resultado;
+        } //else if (jrRadianes.isSelected()){
+            //resultado = celsius 
+        else if (jrCelsius.isSelected()){
+            resultado = celsius;
+            mensaje = "La temperatura en grados celsius es: " + resultado;          
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, "seleccione una unidad");
+        return;
+        }
+
+        javax.swing.JOptionPane.showMessageDialog(this, 
+        mensaje, 
+        "Conversion", 
+        javax.swing.JOptionPane.INFORMATION_MESSAGE);
+        
+        
+        
+  
     }//GEN-LAST:event_jbConvertidorActionPerformed
 
     /**
