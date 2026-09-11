@@ -28,6 +28,7 @@ public class ConversorTemperatura extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jlTitulo = new javax.swing.JLabel();
         jlTexto = new javax.swing.JLabel();
@@ -49,6 +50,7 @@ public class ConversorTemperatura extends javax.swing.JFrame {
         jlTexto.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         jlTexto.setText("Ingrese la temperatura en Grados:");
 
+        buttonGroup1.add(jrFahrenheit);
         jrFahrenheit.setText("A Fahrenheit");
         jrFahrenheit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,6 +58,7 @@ public class ConversorTemperatura extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(jrKelvin);
         jrKelvin.setText("A Kelvin");
         jrKelvin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,6 +66,7 @@ public class ConversorTemperatura extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(jrCelsius);
         jrCelsius.setText("A Celsius");
         jrCelsius.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,6 +74,7 @@ public class ConversorTemperatura extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(jrRadianes);
         jrRadianes.setText("A Radianes");
         jrRadianes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -240,6 +245,7 @@ public class ConversorTemperatura extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jbConvertidor;
     private javax.swing.JLabel jlTexto;
