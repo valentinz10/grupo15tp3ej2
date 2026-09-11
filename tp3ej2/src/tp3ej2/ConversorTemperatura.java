@@ -36,7 +36,6 @@ public class ConversorTemperatura extends javax.swing.JFrame {
         jrFahrenheit = new javax.swing.JRadioButton();
         jrKelvin = new javax.swing.JRadioButton();
         jrCelsius = new javax.swing.JRadioButton();
-        jrRadianes = new javax.swing.JRadioButton();
         jbConvertidor = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -75,14 +74,6 @@ public class ConversorTemperatura extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup1.add(jrRadianes);
-        jrRadianes.setText("A Radianes");
-        jrRadianes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jrRadianesActionPerformed(evt);
-            }
-        });
-
         jbConvertidor.setBackground(new java.awt.Color(153, 153, 153));
         jbConvertidor.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
         jbConvertidor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tp3ej2/share.png"))); // NOI18N
@@ -97,28 +88,23 @@ public class ConversorTemperatura extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jtGrados, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jrFahrenheit)
-                    .addComponent(jrKelvin))
-                .addGap(59, 59, 59)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jrRadianes)
-                    .addComponent(jrCelsius))
-                .addGap(27, 27, 27))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(115, 115, 115)
-                .addComponent(jbConvertidor, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 31, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jtGrados, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(102, 102, 102)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jrCelsius)
+                            .addComponent(jrKelvin)
+                            .addComponent(jrFahrenheit)))
                     .addComponent(jlTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 403, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32))
+                    .addComponent(jlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(jbConvertidor, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -127,20 +113,17 @@ public class ConversorTemperatura extends javax.swing.JFrame {
                 .addComponent(jlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jlTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jrCelsius)
-                            .addComponent(jrFahrenheit))
-                        .addGap(17, 17, 17)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jrKelvin)
-                            .addComponent(jrRadianes)))
-                    .addComponent(jtGrados, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jrFahrenheit)
+                .addGap(12, 12, 12)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jrKelvin)
+                    .addComponent(jtGrados, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jrCelsius)
+                .addGap(37, 37, 37)
                 .addComponent(jbConvertidor, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -169,23 +152,15 @@ public class ConversorTemperatura extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jrCelsiusActionPerformed
 
-    private void jrRadianesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrRadianesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jrRadianesActionPerformed
-
     private void jbConvertidorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbConvertidorActionPerformed
         // TODO add your handling code here:
         
         String txtIngresado = jtGrados.getText().trim();
         
         if (txtIngresado.isEmpty()) {
-        javax.swing.JOptionPane.showMessageDialog(this, 
-            "Por favor, ingrese una temperatura.", 
-            "Atención", 
-            javax.swing.JOptionPane.WARNING_MESSAGE);
+        javax.swing.JOptionPane.showMessageDialog(this, "Por favor, ingrese una temperatura.", "Atención", javax.swing.JOptionPane.WARNING_MESSAGE);
         return;
         }
-        
         
         double celsius = Double.parseDouble(txtIngresado);
         double resultado = 0;
@@ -197,24 +172,15 @@ public class ConversorTemperatura extends javax.swing.JFrame {
         } else if (jrKelvin.isSelected()) {
             resultado = celsius + 273.5;
             mensaje = "La temperatura en grados Kelvin es: " + resultado;
-        } //else if (jrRadianes.isSelected()){
-            //resultado = celsius 
-        else if (jrCelsius.isSelected()){
+        } else if (jrCelsius.isSelected()){
             resultado = celsius;
             mensaje = "La temperatura en grados celsius es: " + resultado;          
         } else {
-            javax.swing.JOptionPane.showMessageDialog(this, "seleccione una unidad");
+            javax.swing.JOptionPane.showMessageDialog(this, "Seleccione una unidad");
         return;
         }
 
-        javax.swing.JOptionPane.showMessageDialog(this, 
-        mensaje, 
-        "Conversion", 
-        javax.swing.JOptionPane.INFORMATION_MESSAGE);
-        
-        
-        
-  
+        javax.swing.JOptionPane.showMessageDialog(this, mensaje, "Conversion", javax.swing.JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jbConvertidorActionPerformed
 
     /**
@@ -251,7 +217,6 @@ public class ConversorTemperatura extends javax.swing.JFrame {
     private javax.swing.JRadioButton jrCelsius;
     private javax.swing.JRadioButton jrFahrenheit;
     private javax.swing.JRadioButton jrKelvin;
-    private javax.swing.JRadioButton jrRadianes;
     private javax.swing.JTextField jtGrados;
     // End of variables declaration//GEN-END:variables
 }
